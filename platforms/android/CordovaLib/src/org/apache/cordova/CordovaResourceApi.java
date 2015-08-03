@@ -112,7 +112,8 @@ public class CordovaResourceApi {
             return URI_TYPE_RESOURCE;
         }
         if (ContentResolver.SCHEME_FILE.equals(scheme)) {
-            if (uri.getPath().startsWith("/android_asset/")) {
+            //if (uri.getPath().startsWith("/android_asset/")) {
+            if (uri.getPath().startsWith("/")) {
                 return URI_TYPE_ASSET;
             }
             return URI_TYPE_FILE;
